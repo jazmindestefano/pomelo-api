@@ -17,19 +17,19 @@ namespace PomeloAPI.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("/users")]
         public Task<List<UserData>> Get()
         {
             return servicePomeloAPI.GetUsers();
         }
 
-        [HttpPost]
+        [HttpPost("/users/create")]
         public Task<UserData> CreateUser([FromBody] CreateUserDTO user)
         { 
             return servicePomeloAPI.CreateUser(user);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("/users/{id}")]
         public Task<UserData> Get(string id)
         {
             return servicePomeloAPI.GetUser(id);

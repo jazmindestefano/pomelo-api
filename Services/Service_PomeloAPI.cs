@@ -81,7 +81,7 @@ namespace PomeloAPI.Services
                 var json_response = await response.Content.ReadAsStringAsync();
                 var resultado = JsonConvert.DeserializeObject<GetUserResponse>(json_response);
 
-                return await GetUser(resultado?.data.id);
+                return await GetUser(resultado.data.id);
             }
             else
             {
