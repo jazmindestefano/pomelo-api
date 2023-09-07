@@ -8,6 +8,7 @@ namespace PomeloAPI.Services
         Task <UserData> CreateUser(CreateUserDTO user);
         Task<List<UserData>> GetUsers();
         Task<UserData> GetUser(string id);
+        Task<CreatedCard> CreateCard(Card newCard);
     }
 }
 

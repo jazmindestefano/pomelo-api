@@ -9,6 +9,7 @@ namespace PomeloAPI.Models
         public string email { get; set; } = null!;
         public string phone { get; set; } = null!;
         public string nationality { get; set; } = null!;
+        public string birthdate { get; set; } = null!;
         public LegalAddressDTO legal_address { get; set; } = null!;
         public string operation_country { get; set; } = null!;
     }

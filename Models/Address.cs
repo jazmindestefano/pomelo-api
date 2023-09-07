@@ -3,25 +3,25 @@ namespace PomeloAPI.Models
 {
 	public class Address
 	{
-        public string street_name { get; set; } = String.Empty;
+        public string? street_name { get; set; } = null;
 
-        public int street_number { get; set; } = 0;
+        public int? street_number { get; set; } = null;
 
-        public int floor { get; set; } = 0;
+        public int? floor { get; set; } = null;
 
-        public string apartmnet { get; set; } = String.Empty;
+        public string? apartment { get; set; } = null;
 
-        public int zip_code { get; set; } = 0;
+        public int? zip_code { get; set; } = null;
 
-        public string neighborhood { get; set; } = String.Empty;
+        public string? neighborhood { get; set; } = null;
 
-        public string city { get; set; } = String.Empty;
+        public string? city { get; set; } = null;
 
-        public string region { get; set; } = String.Empty;
+        public string? region { get; set; } = null;
 
-        public string additional_info { get; set; } = String.Empty;
+        public string? additional_info { get; set; } = null;
 
-        public string country { get; set; } = String.Empty;
+        public string? country { get; set; } = null;
 
 
     }

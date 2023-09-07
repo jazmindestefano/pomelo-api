@@ -63,6 +63,33 @@ namespace PomeloAPI.Services
             }
         }
 
+        public async Task<CreatedCard> CreateCard(Card newCard)
+        {
+            await Auth();
+            var client = new HttpClient();
+
+            client.BaseAddress = new Uri(_baseurl);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
+
+            var content = new StringContent(JsonConvert.SerializeObject(newCard), Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync("/cards/v1", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json_response = await response.Content.ReadAsStringAsync();
+                var resultado = JsonConvert.DeserializeObject<CardResponse>(json_response);
+                return resultado.data;
+            }
+            else
+            {
+                var errorMessage = await response.Content.ReadAsStringAsync();
+                throw new Exception($"La solicitud a la API no fue exitosa. Código de estado HTTP: {newCard.address.zip_code} {response.StatusCode}. Mensaje: {errorMessage}");
+            }
+
+
+        }
+
         public async Task <UserData> CreateUser(CreateUserDTO newUser)
 		{
 			await Auth();
@@ -122,7 +149,6 @@ namespace PomeloAPI.Services
 
         public async Task<List<UserData>> GetUsers()
         {
-            List<UserData> lista = new List<UserData>();
             await Auth();
 
             var client = new HttpClient();
@@ -136,15 +162,15 @@ namespace PomeloAPI.Services
             {
                 var json_response = await response.Content.ReadAsStringAsync();
                 var resultado = JsonConvert.DeserializeObject<GetUsersAPIResponse>(json_response);
-                
-                lista = resultado.data;
+
+                return resultado.data;
             } else
             {
                 throw new Exception("La solicitud a la API no fue exitosa. Código de estado HTTP: " + response.StatusCode);
 
             }
 
-            return lista;
+           
         }
     }
 }

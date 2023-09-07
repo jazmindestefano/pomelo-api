@@ -2,8 +2,6 @@
 using PomeloAPI.Services;
 using PomeloAPI.Models;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace PomeloAPI.Controllers
 {
     [Route("api/[controller]")]
@@ -33,6 +31,12 @@ namespace PomeloAPI.Controllers
         public Task<UserData> Get(string id)
         {
             return servicePomeloAPI.GetUser(id);
+        }
+
+        [HttpPost("/cards/create")]
+        public Task<CreatedCard> CreateCard([FromBody] Card newCard)
+        {
+            return servicePomeloAPI.CreateCard(newCard);
         }
 
     
