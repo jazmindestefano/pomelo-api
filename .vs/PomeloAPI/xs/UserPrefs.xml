@@ -1,21 +1,32 @@
 ﻿<Properties StartupConfiguration="{A7B99EDD-C771-4538-82A5-CB6CE6BE0FD1}|https">
   <MonoDevelop.Ide.ItemProperties.PomeloAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Service_PomeloAPI.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/DatabaseSettings.cs">
     <Files>
-      <File FileName="Services/Service_PomeloAPI.cs" Line="15" Column="38" />
+      <File FileName="Services/Service_PomeloAPI.cs" Line="94" Column="1" />
+      <File FileName="Program.cs" Line="22" Column="35" />
+      <File FileName="appsettings.json" Line="16" Column="20" />
+      <File FileName="Models/DatabaseSettings.cs" Line="12" Column="1" />
+      <File FileName="Models/DatabaseSettings.cs" Line="10" Column="2" />
+      <File FileName="Models/Card.cs" Line="14" Column="1" />
+      <File FileName="Models/CreatedCard.cs" Line="1" Column="1" />
+      <File FileName="Models/CardResponse.cs" Line="1" Column="1" />
+      <File FileName="Models/GetUsersAPIResponse.cs" Line="4" Column="4" />
+      <File FileName="Models/GetCardsAPIResponse.cs" Line="6" Column="34" />
+      <File FileName="Controllers/PomeloController.cs" Line="39" Column="48" />
+      <File FileName="Services/IServicePomeloAPI.cs" Line="12" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PomeloAPI">
-            <Node name="PomeloAPI" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="Service_PomeloAPI.cs" selected="True" />
+            <Node name="PomeloAPI">
+              <Node name="Models" expanded="True">
+                <Node name="GetCardsAPIResponse.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,5 +34,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
 </Properties>

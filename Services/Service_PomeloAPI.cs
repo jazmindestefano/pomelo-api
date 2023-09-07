@@ -86,6 +86,31 @@ namespace PomeloAPI.Services
                 var errorMessage = await response.Content.ReadAsStringAsync();
                 throw new Exception($"La solicitud a la API no fue exitosa. Código de estado HTTP: {newCard.address.zip_code} {response.StatusCode}. Mensaje: {errorMessage}");
             }
+        }
+
+        public async Task<List<CreatedCard>> GetCards()
+        {
+            await Auth();
+
+            var client = new HttpClient();
+
+            client.BaseAddress = new Uri(_baseurl);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _token);
+
+            var response = await client.GetAsync("/cards/v1");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var json_response = await response.Content.ReadAsStringAsync();
+                var resultado = JsonConvert.DeserializeObject<GetCardsAPIResponse>(json_response);
+
+                return resultado.data;
+            }
+            else
+            {
+                throw new Exception("La solicitud a la API no fue exitosa. Código de estado HTTP: " + response.StatusCode);
+
+            }
 
 
         }

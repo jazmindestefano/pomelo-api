@@ -33,6 +33,12 @@ namespace PomeloAPI.Controllers
             return servicePomeloAPI.GetUser(id);
         }
 
+        [HttpGet("/cards")]
+        public Task<List<CreatedCard>> GetCards()
+        {
+            return servicePomeloAPI.GetCards();
+        }
+
         [HttpPost("/cards/create")]
         public Task<CreatedCard> CreateCard([FromBody] Card newCard)
         {
