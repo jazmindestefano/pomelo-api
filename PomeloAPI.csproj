@@ -18,9 +18,15 @@
   <ItemGroup>
     <None Remove="Services\" />
     <None Remove="Models\" />
+    <None Remove="Models\Users\" />
+    <None Remove="Models\Cards\" />
+    <None Remove="Models\Database\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Models\" />
+    <Folder Include="Models\Users\" />
+    <Folder Include="Models\Cards\" />
+    <Folder Include="Models\Database\" />
   </ItemGroup>
 </Project>
