@@ -1,8 +1,20 @@
 ﻿using PomeloAPI.Services;
+using MongoDB.Driver;
+using Microsoft.Extensions.Options;
+using PomeloAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.Configure<DatabaseSettings>(
+                 builder.Configuration.GetSection(nameof(DatabaseSettings)));
+
+builder.Services.AddSingleton<IDatabaseSettings>(sp =>
+     sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
+
+builder.Services.AddSingleton<IMongoClient>(s =>
+        new MongoClient(builder.Configuration.GetValue<string>("DatabaseSettings:ConnectionString")));
 
 builder.Services.AddScoped<IServicePomeloAPI, Service_PomeloAPI>();
 

@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{A7B99EDD-C771-4538-82A5-CB6CE6BE0FD1}|https">
+  <MonoDevelop.Ide.ItemProperties.PomeloAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Service_PomeloAPI.cs">
+    <Files>
+      <File FileName="Services/Service_PomeloAPI.cs" Line="15" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PomeloAPI">
+            <Node name="PomeloAPI" expanded="True">
+              <Node name="Services" expanded="True">
+                <Node name="Service_PomeloAPI.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
